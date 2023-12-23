@@ -1,6 +1,7 @@
 Model Information:
 * title:	ASPHALT9 - LAMBORGHINI TERZO MILLENNIO - A9INFOS
 * source:	https://sketchfab.com/3d-models/asphalt9-lamborghini-terzo-millennio-a9infos-a9aaa22770c945a0aaf65c8c810be0d4
+* source:	https://sketchfab.com/3d-models/free-lamborghini-v12-vision-gran-turismo-bysdc-b1d2f1c3c147400db1bde06c5baa6199
 * author:	SDC PERFORMANCE™️ (https://sketchfab.com/3Duae)
 
 Model License:
