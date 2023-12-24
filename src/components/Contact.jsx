@@ -75,7 +75,7 @@ const Contact = () => {
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Full name</span>
+            {/* <span className="text-white font-medium mb-4">Full name</span> */}
             <input
               readonly
               value="Phùng Thế Việt"
@@ -83,31 +83,22 @@ const Contact = () => {
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Facebook</span>
-            <input
-              type="text"
-              readonly
-              value="https://www.facebook.com/theviet.3499"
+            <a
+              href="https://www.facebook.com/theviet.3499"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
+            ><span className="text-white font-medium mb-4">Facebook</span></a>
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Instagram</span>
-            <input
-              type="text"
-              readonly
-              value="https://www.instagram.com/nodemon0304"
+            <a
+              href="https://www.instagram.com/nodemon0304"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
+            ><span className="text-white font-medium mb-4">Instagram</span></a>
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Linkedin</span>
-            <input
-              type="text"
-              readonly
-              value="https://www.linkedin.com/in/thevietphung"
+            <a
+              href="https://www.linkedin.com/in/thevietphung"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
+            ><span className="text-white font-medium mb-4">Linkedin</span></a>
           </label>
         </form>
       </motion.div>
