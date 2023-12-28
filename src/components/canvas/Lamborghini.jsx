@@ -38,10 +38,10 @@ const LamborghiniCanvas = () => {
     const rotationInterval = setInterval(() => {
       setRotationSpeed((prevRotation) => [
         prevRotation[0],
-        prevRotation[1] + 0.01, // Tăng góc quay theo trục Y
+        prevRotation[1] + 0.001, // Tăng góc quay theo trục Y
         prevRotation[2],
       ]);
-    }, 120);
+    }, 10);
 
     // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia('(max-width: 500px)');
