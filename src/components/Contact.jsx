@@ -75,7 +75,6 @@ const Contact = () => {
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
-            {/* <span className="text-white font-medium mb-4">Full name</span> */}
             <input
               readonly
               value="Phùng Thế Việt"
@@ -85,18 +84,21 @@ const Contact = () => {
           <label className="flex flex-col">
             <a
               href="https://www.facebook.com/theviet.3499"
+              target="_blank"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             ><span className="text-white font-medium mb-4">Facebook</span></a>
           </label>
           <label className="flex flex-col">
             <a
               href="https://www.instagram.com/nodemon0304"
+              target="_blank"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             ><span className="text-white font-medium mb-4">Instagram</span></a>
           </label>
           <label className="flex flex-col">
             <a
               href="https://www.linkedin.com/in/thevietphung"
+              target="_blank"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             ><span className="text-white font-medium mb-4">Linkedin</span></a>
           </label>
