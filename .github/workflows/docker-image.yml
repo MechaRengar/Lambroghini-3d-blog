@@ -42,6 +42,6 @@ jobs:
           username: ${{ secrets.HOST_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script:
-            - docker stop ${{ secrets.CONTAINER_NAME }}
-            - docker rm ${{ secrets.CONTAINER_NAME }}
-            - docker run -d -p ${{ secrets.PORT }}:${{ secrets.PORT }} --restart unless-stopped --name ${{ secrets.CONTAINER_NAME }} -t -v /home/${{ secrets.HOST_USERNAME }}/log:/usr/src/app/log ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_NAME }}:production
+            docker stop ${{ secrets.CONTAINER_NAME }}
+            docker rm ${{ secrets.CONTAINER_NAME }}
+            docker run -d -p ${{ secrets.PORT }}:${{ secrets.PORT }} --restart unless-stopped --name ${{ secrets.CONTAINER_NAME }} -t -v /home/${{ secrets.HOST_USERNAME }}/log:/usr/src/app/log ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_NAME }}:production
