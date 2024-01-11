@@ -57,4 +57,4 @@ jobs:
           script:
             docker stop ${{ secrets.CONTAINER_NAME }}
             docker rm ${{ secrets.CONTAINER_NAME }}
-            docker run -d -p ${{ secrets.PORT }}:${{ secrets.PORT }} --restart unless-stopped --name ${{ secrets.CONTAINER_NAME }} -t -v /home/${{ secrets.HOST_USERNAME }}/log:/usr/src/app/log ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_NAME }}:production
+            docker run -p ${{ secrets.PORT }}:${{ secrets.PORT }} -d --restart on-failure --name ${{ secrets.CONTAINER_NAME }}:latest
