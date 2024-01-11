@@ -41,7 +41,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_NAME }}:production
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_NAME }}:latest
 
   run_on_container:
     runs-on: ubuntu-latest
