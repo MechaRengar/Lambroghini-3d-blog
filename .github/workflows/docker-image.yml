@@ -8,6 +8,7 @@ on:
 jobs:
   push_to_docker_hub:
     runs-on: ubuntu-latest
+    environment: lambroghini
     strategy:
       matrix:
         node-version: [18.x]
@@ -44,6 +45,7 @@ jobs:
 
   run_on_container:
     runs-on: ubuntu-latest
+    environment: lambroghini
     needs: push_to_docker_hub
     steps:
       - name: Deploy to VPS
