@@ -33,7 +33,7 @@
 </p>
    
  <h4>
-    <a href="https://threejs-3-d-portfolio.vercel.app/">View Demo</a>
+    <a href="https://vietdev.blog">View Demo</a>
   <span> · </span>
     <a href="https://github.com/ladunjexa/Threejs_3D_Portfolio">Documentation</a>
   <span> · </span>
