@@ -18,17 +18,6 @@ jobs:
         with:
           clean: 'false'
 
-      - name: Debug Secrets
-        run: |
-          echo "DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}"
-          echo "DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}"
-          echo "CONTAINER_NAME: ${{ secrets.CONTAINER_NAME }}"
-          echo "DOCKER_NAME: ${{ secrets.DOCKER_NAME }}"
-          echo "HOST: ${{ secrets.HOST }}"
-          echo "HOST_USERNAME: ${{ secrets.HOST_USERNAME }}"
-          echo "PORT: ${{ secrets.PORT }}"
-          echo "SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}"
-
       - name: Login to HUB
         uses: docker/login-action@v1
         with:
