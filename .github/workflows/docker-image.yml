@@ -44,4 +44,4 @@ jobs:
           username: ${{ secrets.HOST_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script:
-            docker stop ${{ secrets.DOCKER_NAME }} && docker rm ${{ secrets.DOCKER_NAME }} && docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_NAME }}:latest && docker run -p ${{ secrets.PORT }}:${{ secrets.PORT }} -d --restart on-failure --name ${{ secrets.DOCKER_NAME }} ${{secrets.DOCKER_USERNAME}}/${{ secrets.DOCKER_NAME }}:latest
+            docker stop ${{ secrets.DOCKER_NAME }} && docker rm ${{ secrets.DOCKER_NAME }} && docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_NAME }}:latest && docker run -p ${{ secrets.PORT }}:${{ secrets.PORT }} -d --restart on-failure --name ${{ secrets.DOCKER_NAME }} ${{secrets.DOCKER_USERNAME}}/${{ secrets.DOCKER_NAME }}:latest && docker logout
