@@ -23,7 +23,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          registry: https://index.docker.io/v1/
 
       - name: Build and Push
         uses: docker/build-push-action@v2
@@ -33,7 +32,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_NAME }}:latest
 
-  run_on_container:
+  deploy_image_on_vps:
     runs-on: ubuntu-latest
     environment: lambroghini
     needs: push_to_docker_hub
@@ -45,4 +44,4 @@ jobs:
           username: ${{ secrets.HOST_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script:
-            docker stop ${{ secrets.DOCKER_NAME }} && docker rm ${{ secrets.DOCKER_NAME }} && docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_NAME }}:latest && docker run -p ${{ secrets.PORT }}:${{ secrets.PORT }} -d --restart on-failure --name ${{ secrets.DOCKER_NAME }} ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_NAME }}:latest
+            docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} && docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_NAME }}:latest && docker stop ${{ secrets.DOCKER_NAME }} && docker rm ${{ secrets.DOCKER_NAME }} && docker run -p ${{ secrets.PORT }}:${{ secrets.PORT }} -d --restart on-failure --name ${{ secrets.DOCKER_NAME }} ${{secrets.DOCKER_USERNAME}}/${{ secrets.DOCKER_NAME }}:latest && docker image prune -f && docker logout
