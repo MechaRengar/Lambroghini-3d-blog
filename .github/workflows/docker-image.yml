@@ -55,4 +55,4 @@ jobs:
           username: ${{ secrets.HOST_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script:
-            docker stop ${{ secrets.CONTAINER_NAME }} && docker rm ${{ secrets.CONTAINER_NAME }} && docker run -p ${{ secrets.PORT }}:${{ secrets.PORT }} -d --restart on-failure --name ${{ secrets.CONTAINER_NAME }}:latest
+            docker stop ${{ secrets.CONTAINER_NAME }} && docker rm ${{ secrets.CONTAINER_NAME }} && docker run -p ${{ secrets.PORT }}:${{ secrets.PORT }} -d --restart on-failure --name ${{ secrets.CONTAINER_NAME }} ${{ secrets.CONTAINER_NAME }}:latest
