@@ -8,7 +8,7 @@ import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 
 const Contact = () => {
-  const formRef = useRef();
+  const formRef = useRef(null);
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -75,8 +75,7 @@ const Contact = () => {
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
-            <input
-              readonly
+            <p
               value="Phùng Thế Việt"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
@@ -86,21 +85,27 @@ const Contact = () => {
               href="https://www.facebook.com/theviet.3499"
               target="_blank"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            ><span className="text-white font-medium mb-4">Facebook</span></a>
+            >
+              <span className="text-white font-medium mb-4">Facebook</span>
+            </a>
           </label>
           <label className="flex flex-col">
             <a
               href="https://www.instagram.com/nodemon0304"
               target="_blank"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            ><span className="text-white font-medium mb-4">Instagram</span></a>
+            >
+              <span className="text-white font-medium mb-4">Instagram</span>
+            </a>
           </label>
           <label className="flex flex-col">
             <a
               href="https://www.linkedin.com/in/thevietphung"
               target="_blank"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            ><span className="text-white font-medium mb-4">Linkedin</span></a>
+            >
+              <span className="text-white font-medium mb-4">Linkedin</span>
+            </a>
           </label>
         </form>
       </motion.div>
