@@ -75,12 +75,6 @@ const Contact = () => {
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
-            <p
-              value="Phùng Thế Việt"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
-          <label className="flex flex-col">
             <a
               href="https://www.facebook.com/theviet.3499"
               target="_blank"
